@@ -42,6 +42,7 @@ class Employee
 	def give_annual_raise
 		@salary = 1.05 * @salary
 	end
+	
 end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
