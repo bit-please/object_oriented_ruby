@@ -28,11 +28,11 @@ class Employee
 
 	# attr_accessor :first_name, :last_name, :active, :salary
 
-	def initialize(input_first_name, input_last_name, input_salary, input_active)
-		@first_name = input_first_name 
-		@last_name = input_last_name 
-		@salary = input_salary 
-		@active = input_active 
+	def initialize(input_options)
+		@first_name = input_options[:first_name]
+		@last_name = input_options[:last_name] 
+		@salary = input_options[:salary]
+		@active = input_options[:active] 
 	end
 
 	def print_info
@@ -44,8 +44,8 @@ class Employee
 	end
 end
 
-employee1 = Employee.new("Majora", "Carter", 80000, true)
-employee2 = Employee.new("Danilo", "Campos", 70000, true)
+employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
+employee2 = Employee.new(last_name: "Campos", salary: 70000, active: true, first_name: "Danilo")
 employee1.print_info
 employee2.print_info
 employee1.give_annual_raise
