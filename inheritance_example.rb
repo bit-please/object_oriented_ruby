@@ -1,7 +1,7 @@
 class Vehicle
   def initialize
     @speed = 0
-    @direction = 'south'
+    @direction = 'north'
   end
 
   def brake
